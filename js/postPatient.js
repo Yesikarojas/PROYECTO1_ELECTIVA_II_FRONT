@@ -1,8 +1,7 @@
 console.log('Hola')
 
 document.getElementById('addPatient').addEventListener('click', async ()=>{
-    const gender = ((document.getElementById('gender').value)=="F"?true:false)
-    console.log(gender)
+
     const response = await fetch("http://localhost:3000/patients/",{
         method:'POST',
         headers: {
@@ -19,5 +18,5 @@ document.getElementById('addPatient').addEventListener('click', async ()=>{
     })
 
     const result = await response.json()
-    console.log(result)
+    result.result==true ? window.alert("Paciente Registrado Con Éxito") : window.alert("Paciente No Registrado")
 })
