@@ -77,6 +77,65 @@
             </div>            
         </div>
     </div>
+
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header btn-warning">
+              <h5 class="modal-title bi bi-pencil" id="updateModalLabel"> Actualizar Paciente</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <input type="hidden" id="code" />
+
+                    <div class="form-group row">
+                        <label for="dni" class="col-sm-2 col-form-label">n° Identificaci&oacute;n:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="dni" placeholder="n° Identificaci&oacute;n" required >
+						</div>
+						<label for="names" class="col-sm-2 col-form-label">Nombres:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="names" placeholder="Nombres Completos" required >
+						</div>					
+					</div>
+								
+					<div class="form-group row">
+						<label for="phone" class="col-sm-2 col-form-label">Celular:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="phone" placeholder="n° Celular" required>
+						</div>
+						<label for="age" class="col-sm-2 col-form-label">Edad:</label>
+						<div class="col-sm-4">
+                            <input type="range" class="form-control-range" min="0" max="99" step="1" id="age">
+                        </div>
+					</div>
+								
+					<div class="form-group row">
+						<label for="eps" class="col-sm-2 col-form-label">EPS:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="eps" placeholder="Nombre EPS" required>
+						</div>
+                        <label for="gender" class="col-sm-2 col-form-label">G&eacute;nero:</label>
+						<div class="col-sm-4">
+                            <select id="gender" class="form-control" name="gender" required>
+                                <option value=true>Femenino</option>
+                                <option value=false>Masculino</option>
+                            </select>
+                        </div>
+					</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" id="saveChanges">Guardar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </body>
     <script src="./js/patient.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
