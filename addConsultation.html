@@ -18,6 +18,36 @@
 </head>
 <body>
 
+    <div class="d-flex">
+   	 
+        <div id="menu1">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+                <div class="container1" id="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="menu">
+                            <a href="./index.html" class="d-block p-3 border-0 text-dark">
+                                Inicio
+                            </a>
+                            <a href="./patient.html" class="d-block p-3 border-0 text-dark">
+                                Pacientes
+                            </a>
+                            <a href="./doctor.html" class="d-block p-3 border-0 text-dark">
+                                Doctores
+                            </a>
+                            <a href="./consultation.html" class="d-block p-3 border-0 text-dark">
+                                Consultas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    
     <div class="container">
         <div class="card">
             <div class="card-header text-center">
@@ -26,76 +56,58 @@
                 </form>
                 <h5>Gesti&oacute;n consultas</h5>
             </div>
-            <form class="form-horizontal" id="addPatientForm">
+            
 
             <div class="card-body">
 					<div class="form-group row">
                         <label for="dni" class="col-sm-2 col-form-label">ID:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="dni" placeholder="Identificador" required >
+							<input type="text" class="form-control" id="dni" placeholder="Identificador" required >
 						</div>
-						<label for="names" class="col-sm-2 col-form-label">Consultorio:</label>
+						<label for="consultorio" class="col-sm-2 col-form-label">Consultorio:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="names" placeholder="# Consultorio" required >
+							<input type="text" class="form-control" id="consultorio" placeholder="# Consultorio" required >
 						</div>					
 					</div>
 								
 					<div class="form-group row">
-						<label for="date" class=" col-sm-2 col-form-label">Fecha</label>
-                        <div class="col-sm-4">
-                            <div class="input-group date" id="datepicker">
-                                <input type="text" class="form-control">
-                                <span class="input-group-append">
-                                    <span class="input-group-text bg-white"><i class="bi bi-calendar3"></i>
-                                    </span>
-                                </span>
+
+						<label for="dateConsult" class="col-sm-2 col-form-label">Fecha:</label>
+                            <div class="col-sm-4">
+                                <input type="date" class="form-control" id="dateConsult" value="2022-06-30" min="2022-06-30" max="2022-12-31" >
                             </div>
-                        </div>
-						<label for="phone" class="col-sm-2 col-form-label">Detalle</label>
+                            
+						<label for="reason" class="col-sm-2 col-form-label">Detalle</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="phone" placeholder="Motivo de la consulta" required>
+							<input type="text" class="form-control" id="reason" placeholder="Motivo de la consulta" required>
 						</div>
 					</div>
 								
 					<div class="form-group row">
-						<label for="phone" class="col-sm-2 col-form-label">Paciente</label>
+						<label for="patient" class="col-sm-2 col-form-label">Paciente</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="phone" placeholder="ID paciente" required>
+							<input type="text" class="form-control" id="patient" placeholder="ID paciente" required>
 						</div>
-						<label for="phone" class="col-sm-2 col-form-label">Doctor</label>
+						<label for="doctor" class="col-sm-2 col-form-label">Doctor</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="phone" placeholder="ID doctor" required>
+							<input type="text" class="form-control" id="doctor" placeholder="ID doctor" required>
 						</div>
 					</div>		
 				
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-sm btn-success bi bi-person-plus" href=""> Agregar Consulta</button>
+                <button type="button" id="addConsultation" class="btn btn-sm btn-success bi bi-card-list"> Agregar Consulta</button>
                 <a class="btn btn-sm btn-warning bi bi-arrow-return-left" href="./consultation.html"> Cancelar</a>
             </div>
-        </form>           
+           
         </div>
     </div>
-
+    </div>
 </body>
     <script src="./js/postConsultation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script><!-- comment -->
-      
-    <script type="text/javascript">
-        $(function() {
-            $('#datepicker').datepicker();
-        });
-    </script>
     </html>
