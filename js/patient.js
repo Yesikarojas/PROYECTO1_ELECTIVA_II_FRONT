@@ -41,5 +41,4 @@ async function delPatient(id){
     getTable()
 }
 
-
 getTable()

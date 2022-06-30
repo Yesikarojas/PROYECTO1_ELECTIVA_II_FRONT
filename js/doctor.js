@@ -32,5 +32,4 @@ async function delDoctor(id){
     getTable()
 }
 
-
 getTable()
