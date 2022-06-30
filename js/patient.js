@@ -11,7 +11,7 @@ let getTable = async ()=> {
             <td>${data.phone}</td>
             <td>${data.age}</td>
             <td>${data.eps}</td>
-            <td>${(data.gender=="true"?"Femenino":"Masculino")}</td>
+            <td>${(data.gender==true?"Femenino":"Masculino")}</td>
             <td >
                 <a id="btnUpd" class="btn btn-sm btn-warning bi bi-pencil" href=""></a>
                 <a id="btnDel" class="btn btn-sm btn-danger bi bi-x-lg" onclick="delPatient('${data._id}')"></a>

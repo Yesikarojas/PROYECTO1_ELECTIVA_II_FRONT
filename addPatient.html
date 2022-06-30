@@ -11,7 +11,7 @@
     <title>A&ntilde;adir Pacientes</title>
 </head>
 <body>
-
+<a href="./patient.html">voltar</a>
     <div class="container">
         <div class="card">
             <div class="card-header text-center">
@@ -20,24 +20,22 @@
                 </form>
                 <h5>Gesti&oacute;n Pacientes</h5>
             </div>
-            <form class="form-horizontal" id="addPatientForm">
-
             <div class="card-body">
 					<div class="form-group row">
                         <label for="dni" class="col-sm-2 col-form-label">n° Identificaci&oacute;n:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="dni" placeholder="n° Identificaci&oacute;n" required >
+							<input type="text" class="form-control" id="dni" placeholder="n° Identificaci&oacute;n" required >
 						</div>
 						<label for="names" class="col-sm-2 col-form-label">Nombres:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="names" placeholder="Nombres Completos" required >
+							<input type="text" class="form-control" id="names" placeholder="Nombres Completos" required >
 						</div>					
 					</div>
 								
 					<div class="form-group row">
 						<label for="phone" class="col-sm-2 col-form-label">Celular:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="phone" placeholder="n° Celular" required>
+							<input type="text" class="form-control" id="phone" placeholder="n° Celular" required>
 						</div>
 						<label for="age" class="col-sm-2 col-form-label">Edad:</label>
 						<div class="col-sm-4">
@@ -48,26 +46,25 @@
 					<div class="form-group row">
 						<label for="eps" class="col-sm-2 col-form-label">EPS:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="eps" placeholder="Nombre EPS" required>
+							<input type="text" class="form-control" id="eps" placeholder="Nombre EPS" required>
 						</div>
                         <label for="gender" class="col-sm-2 col-form-label">G&eacute;nero:</label>
 						<div class="col-sm-4">
 							<label class="radio-inline">
-								<input type="radio" id="gender" name="gender" value="true"> Femenino
+								<input type="radio" id="gender" name="gender" value="F" checked> Femenino
 							</label>
 							<label class="radio-inline">
-								<input type="radio" id="gender" name="gender" value="false"> Masculino
+								<input type="radio" id="gender" name="gender" value="M"> Masculino
 							</label>
 						</div>
-					</div>			
+					</div>		
 				
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-sm btn-success bi bi-person-plus" href=""> Agregar Paciente</button>
+                <button type="button" id="addPatient" class="btn btn-sm btn-success bi bi-person-plus"> Agregar Paciente</button>
                 <a class="btn btn-sm btn-warning bi bi-arrow-return-left" href="./patient.html"> Cancelar</a>
             </div>
-        </form>           
-        </div>
++        </div>
     </div>
 
 </body>
