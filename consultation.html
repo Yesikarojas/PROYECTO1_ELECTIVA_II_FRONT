@@ -11,8 +11,74 @@
     <title>Gest. Consultas</title>
 </head>
 <body>
-
+    <div class="d-flex">
+   	 
+        <div id="menu1">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+                <div class="container1" id="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="menu">
+                            <a href="./index.html" class="d-block p-3 border-0 text-dark">
+                                Inicio
+                            </a>
+                            <a href="./patient.html" class="d-block p-3 border-0 text-dark">
+                                Pacientes
+                            </a>
+                            <a href="./doctor.html" class="d-block p-3 border-0 text-dark">
+                                Doctores
+                            </a>
+                            <a href="./consultation.html" class="d-block p-3 border-0 text-dark">
+                                Consultas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <form class="form-inline position-relative d-inline-block my-2">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBCkWJu_AKXa9ZS_y8qexxfoIJ2ASrdHOZ5M-oIIeWhgh4YymXJiFG_7rJkWVlFxyYK0aweFhse_3kmgSfP022CAVigqP6VLJFYNSO7g8kIzUde-S25lbGex43yVnij6wmd9wTwoCH-hIzJfsCJu7hI0HKPGpZxLV-gRXZdIOXdhkfBQfwGPqUOh91Ng/s334/Logo.PNG" class="card-img-top" alt="imageProMedic">
+                </form>
+                <h5>Gesti&oacute;n Consultas</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="tbPatients" class="table table-striped table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Cosnsultorio</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Detalle</th>
+                            <th scope="col">Paciente</th>
+                            <th scope="col">Doctor</th>
+                            <th scope="col">Opciones</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <td>
+                                <a class="btn btn-warning bi bi-pencil-square" href="./updateConsultation.html"></a>
+                                <a class="btn btn-danger bi bi-trash3-fill"></a>
+                            </td>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-sm btn-success bi bi-person-plus" href="./addConsultation.html"> Agregar Consulta</a>
+            </div>            
+        </div>
+    </div>
 </body>
+    <script src="./js/consultation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
