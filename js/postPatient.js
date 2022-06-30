@@ -20,5 +20,4 @@ document.getElementById('addPatient').addEventListener('click', async ()=>{
 
     const result = await response.json()
     console.log(result)
-
 })
